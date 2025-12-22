@@ -1,6 +1,9 @@
 # fastapi-demo
+
 Bigger Applications - Multiple Files
 
+file structure
+```
 .
 ├── app
 │   ├── __init__.py
@@ -13,7 +16,9 @@ Bigger Applications - Multiple Files
 │   └── internal
 │       ├── __init__.py
 │       └── admin.py
+```
 
+how to run
 ```
 pip install fastapi,uvicorn
 uvicorn app.main:app
