@@ -22,6 +22,6 @@ file structure
 
 how to run
 ```
-pip install fastapi,uvicorn
+pip install -r requirements.txt
 uvicorn app.main:app
 ```
