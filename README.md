@@ -2,6 +2,8 @@
 
 Bigger Applications - Multiple Files
 
+Python 3.10+
+
 file structure
 ```
 .
