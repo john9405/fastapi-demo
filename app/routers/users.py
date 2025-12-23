@@ -1,19 +1,16 @@
-from fastapi import APIRouter
+from typing import Annotated
+
+from fastapi import APIRouter, Depends
+
+from ..dependencies import get_current_active_user
+from ..models import User
 
 router = APIRouter()
 
+@router.get("/users/me", tags=["users"], response_model=User)
+async def read_user_me(
+    current_user: Annotated[User, Depends(get_current_active_user)],
+):
+    return current_user
 
-@router.get("/users/", tags=["users"])
-async def read_users():
-    return [{"username": "Rick"}, {"username": "Morty"}]
-
-
-@router.get("/users/me", tags=["users"])
-async def read_user_me():
-    return {"username": "fakecurrentuser"}
-
-
-@router.get("/users/{username}", tags=["users"])
-async def read_user(username: str):
-    return {"username": username}
     

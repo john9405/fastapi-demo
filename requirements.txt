@@ -1,0 +1,6 @@
+fastapi
+pwdlib[argon2]
+pydantic
+pyjwt
+python-multipart
+uvicorn
